@@ -1,0 +1,13 @@
+.request-plugin-container {
+  padding: 0 16px 16px;
+}
+
+.events-table th, .events-table td {
+  border: 1px solid black !important;
+  padding: 4px;
+}
+
+#chart-container {
+  width: 100%;
+  height: auto;
+}

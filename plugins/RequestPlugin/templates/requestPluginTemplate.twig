@@ -1,0 +1,68 @@
+{# <div>
+    <h2>{{ vizTitle }}</h2>
+
+    <table class="dataTable">
+        <thead>
+            <tr>
+                {% for name in properties.columns_to_display %}
+                    {% if name in properties.translations|keys %}
+                        <th>{{ properties.translations[name]|translate }}</th>
+                    {% else %}
+                        <th>{{ name }}</th>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for tableRow in dataTable.getRows %}
+            <tr>
+                {% for column in properties.columns_to_display %}
+                    <td>{{ tableRow.getColumn(column)|default('-')|truncate(50)|rawSafeDecoded }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div> #}
+<div>
+    <ul>
+        <li>
+            <span><strong>Id Site:</strong> {{ idSite }}</span>
+        </li>
+        <li>
+            <span><strong>date:</strong> {{ date }}</span>
+        </li>
+        <li>
+            <span><strong>period:</strong> {{ period }}</span>
+        </li>
+        <li>
+            <span><strong>dateRange:</strong> {{ dateRange }}</span>
+        </li>
+    </ul>
+    <div class="dataTable dataTableVizHtmlTable" data-table-type"DataTable">
+        <div class="dataTableWrapper">
+            <div class="dataTableScroller">
+                <table class="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Evento</th>
+                            <th>Respuesta</th>
+                            <th>Resultados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for event_name in reports %} 
+                            <tr> 
+                                <td>{{ event_name['category'] }}</td>
+                                <td>{{ event_name['action_value'] }}</td>
+                                <td>{{ event_name['name'] }}</td>
+                                <td>{{ event_name['results'] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

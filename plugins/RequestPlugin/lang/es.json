@@ -1,0 +1,6 @@
+{
+    "RequestPlugin": {
+        "Servermetrics": "Métricas del servidor",
+        "Requests": "Peticiones"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "RequestPlugin",
+    "description": "Show request information",
+    "version": "0.0.1",
+    "theme": false,
+    "require": {
+        "matomo": ">=4.10.0-b1,<5.0.0-b1"
+    },
+    "authors": [
+        {
+            "name": "Matomo",
+            "email": "",
+            "homepage": ""
+        }
+    ],
+    "support": {
+        "email": "",
+        "issues": "",
+        "forum": "",
+        "irc": "",
+        "wiki": "",
+        "source": "",
+        "docs": "",
+        "rss": ""
+    },
+    "homepage": "",
+    "license": "GPL v3+",
+    "keywords": []
+}
